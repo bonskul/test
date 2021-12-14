@@ -1,0 +1,378 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;  
+}
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+header{
+    background-color: #fff;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin: 0 20px;
+}
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+.slidenumber{
+    color: red;
+}
+#slidetext{
+    display: flex;
+    justify-content: center;
+    background-color: #e0e0e0;
+    border: solid 1px green;
+    border-radius: 50px;
+    height: 31px; 
+    /* list-style: none; */
+    padding: auto;
+}
+.fa-circle{
+    color: red;
+
+}
+#slidetext li{
+    font-size: 13px;
+    line-height: 31px;
+    padding: auto;
+}
+.slide{
+    color:#606060;
+    padding-left: 15px;
+    font-weight: 300px;
+}
+.slidenumber1{
+    color: green;
+}
+
+#slidetext #titleslide{
+    text-transform: uppercase;
+    color: white;
+    padding: 0 15px;
+    background-color: green;
+    height: 31px;   
+    border-radius: 90px 150px 0px 90px ;
+}
+marquee{  
+    width: 373px;
+}
+/* search */
+input{
+    width: 0;
+    border: none;
+    outline: none;
+     transition: width 1s;
+}
+
+ #search:hover input{
+     width: 150px;
+     border-bottom: green solid 1px;
+}
+#search{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 200px;
+}
+.fa-search{
+    font-weight: 300px;
+    color: grey;
+}
+/* user */
+#users{
+    display: flex;
+    justify-content: space-around;
+    width: 60px;
+    height: 34px;
+    border: solid #e0e0e0 1px;
+    border-radius: 20px;
+    padding: 5px;
+    position: relative;
+    align-items: baseline;
+
+}
+.iconuser{
+    font-size: 20px;
+}
+#users .fa-chevron-up{
+    display: none;
+}
+#users:hover .arrowdown{
+    display: none;
+}
+#users:hover .fa-chevron-up{
+    display: inline-block;
+
+}
+.login{
+    display: none;
+    box-shadow: 0 0 10px rgba(0,0,0, 0.5);
+    height: 50px;
+    width: 200px;
+    position: absolute;
+    right: 51px;
+    border-radius: 5px;
+    background-color: white;
+}
+.login li a{
+    text-align: center;
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+    line-height: 46px;
+    padding: 5px;
+}
+.login li{
+    padding: 10px;
+}
+.loginicon:hover .login{
+    display: block;
+    z-index: 2;
+}
+header .login li:hover a{
+    color: red;
+}
+/* navigation */
+#navbar{
+    position: sticky;
+    background-color: green;
+    height: 36px;
+    top: 0;
+    /* float: left;
+    width: fit-content; */
+    z-index: 1;
+}
+#nav{
+    /* position: sticky;
+    background-color: green;
+    height: 36px; */
+     position:relative;
+    display: flex;
+    justify-content: space-evenly;
+    right: 0;
+    padding-left: 56px;
+}
+
+
+
+#nav > li{
+    display: inline-block;
+}
+#nav li a {
+    font-size: 13px;
+    display: block;
+    line-height: 36px;
+    padding: 0 8px;
+    color: white;
+    
+    text-transform: capitalize;
+}
+
+#nav >li:hover> a{
+    background-color: darkgreen;
+}
+.subnav{
+    background-color: white;
+    display: none; 
+    position: absolute;
+    min-height: 100px;
+    box-shadow: 1px 1px 2px 2px darkgrey;
+    
+}
+#nav .subnav li a::before{
+    content: "•";
+    padding-right: 8px;
+    color: green;
+}
+#nav li:hover .subnav{
+    display: block;
+}
+#nav .subnav li a{
+    color: black;
+    border-bottom: solid 1px  rgb(221, 221, 252) ;
+    font-weight: bold;
+}
+#nav .subnav li:hover a{
+    color:blue;
+}
+#subnav1{
+    right: 32px;
+}
+#subnav2{
+ right: 0px;
+}
+.navicon .fa-times{
+    display: none;
+    padding-right: 2.5px;    
+}
+#nav  li:hover .fa-bars{
+    display: none;
+}
+#nav  li:hover .fa-times{
+    display: inline-block;
+} 
+#nav li:hover #subnav2{
+    display: grid;
+    grid-template-columns: 123px 123px;
+}
+
+
+/* content */
+
+
+
+#container #content{
+    display: flex;
+}
+#container #content {
+    padding-left: 56px;
+    padding-top: 10px;
+    width: 840px;
+}
+ .items2{
+    
+    border-left: rgb(221, 221, 252) solid 1px;
+    padding: 10px;
+}
+.items2 ul li:not(:first-child)::before{
+    content: "•";
+    padding-right: 8px;
+    color: blue;
+}
+.items2 li:first-child {
+    padding: 9px;
+    margin-top: -9px;
+    border-top: royalblue solid 1px;
+     border-top-width: 50%; 
+    text-transform: uppercase;
+    color: royalblue;
+    font-weight: bolder;
+}
+.items2 ul li:not(:first-child){
+    padding: 9px;
+    border-bottom: rgb(221, 221, 252) solid 1px;
+}
+.items1 >.items12 li::before{
+    content: "•";
+    padding-right: 8px;
+    color:green;
+}
+#content .items2 li:hover{
+    color: rgb(0, 102, 204);
+} 
+ 
+.items12 li,
+.items2 li  {
+    font-weight: bold;
+    padding: 4px;
+    font-size: 14px;
+}
+#content1{
+    display: flex;
+    align-items: flex-start;
+    width: 816px;
+    padding-left: 56px;
+}
+#content1 >.pic{
+    height: 263px;
+    width: 251px;
+    margin: 10px 10px;
+}
+#content1 >.pic >a {
+    color: black;
+    font-weight: bold;
+}
+#content1{
+    border-bottom: darkgray 3px solid;
+}
+#content2{
+    display: grid;   
+    min-height: 300px;
+    grid-template-columns: 500px 300px ; 
+    padding: 30px 56px;
+
+
+} 
+ #content2 .content2I{
+    display: grid;
+    grid-template-rows: 171px 171px 171px ;
+    width: 500px;
+} 
+#content2 #navpic{
+    background-color:rgb(221, 221, 252);
+    min-height: 100px;
+    border-top: skyblue 3px solid;
+    /* display: flex; */
+    padding-left: 10px;
+}  
+#navpic,.content2{
+    margin: 10px 15px;
+}
+#content2  div img{
+    float: left;
+    width: 176px ;
+    padding-right: 8px;
+
+}
+.content2I .pic a{
+    display: block;
+    color: black;
+}
+#container #navpic h3{
+    color: rgb(0, 102, 204);
+    display: block;   
+}
+
+#navpic ul li{ 
+    display: inline-block;
+}
+#navpic ul li a{
+    padding-left: 4px;
+    font-size: 13px;
+    color: rgb(97, 97, 97);
+    text-transform: capitalize;
+    font-weight:  500;
+}
+#navpic ul li:not(:first-child){
+     border-left: rgb(97, 97, 97) solid 1px;
+}
+#content2 > #navpic > #pic3 {
+    width: 260px;
+    margin: auto;
+    float: none;
+}
+img:hover{
+    opacity: 0.9;
+}
+#footer{
+    background-color: rgba(224, 224, 224, 0.3);
+    min-height: 286px;
+    position: relative;
+    bottom: 0px;
+    display: flex;
+    align-items: top;
+}
+#footer div pre{
+    padding-top: 20px;
+    font-size: 13px;
+    color: rgba(96, 96, 96, 1);
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+#footer #molble {
+    width: 250px;
+    display: flex;
+    justify-items: baseline;
+    justify-content: space-around;
+    margin-left: 60px;
+}
+  
